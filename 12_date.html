@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="text" placeholder="Din Alder" id="yourAge">
+    <input type="text" placeholder="Din dates alder" id="dateAge">
+    <button>tjek</button>
+    <script>
+        let result;
+
+        document.querySelector("button").addEventListener("click", udregn)
+        function udregn() {
+            let yourAge = document.querySelector("#yourAge").value;
+            let dateAge = document.querySelector("#dateAge").value;
+
+            if ((yourAge / 2 + 7) > dateAge && (dateAge / 2 + 7) < yourAge) {
+                result = "Din date er ikke gammel nok, men det er du"
+            } else if ((dateAge / 2 + 7) > yourAge && (yourAge / 2 + 7) < dateAge) {
+                result = "Din date er gammel nok, men det er du ikke"
+            } else {
+                result = "I er et perfekt match!"
+            }
+
+            if (yourAge < 15 || dateAge < 15) {
+                result = "Begge skal være over 15!"
+            }
+
+            console.log(result);
+        }
+    </script>
+</body>
+
+</html>
