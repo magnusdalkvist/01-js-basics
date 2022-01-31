@@ -10,10 +10,19 @@
 
 <body>
     <script>
-        let længde = 3;
-        let bredde = 5;
+        let længde = 4;
+        let bredde = 50;
         let areal = længde * bredde;
-        let resultat = `Længden er ${længde} meter og bredden er ${bredde} meter. Arealet er ${længde * bredde} meter`;
+        let resultat = 0;
+
+        if (areal < 100) {
+            resultat = 'Arealet er for lille';
+        } else if (areal < 200) {
+            resultat = 'Arealet er ok';
+        } else {
+            resultat = 'Arealet er for stort';
+        }
+
         console.log(resultat);
     </script>
 </body>
